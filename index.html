@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>click and run</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top-div">
+        <!-- animation  -->
+        <div class="confetti" id="animation">
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+                    <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+        </div>
+        <h1 class="game-name flash neon">Click <span class="and">And</span> <img class="" src="asset/Run_icon.png" /></h1>
+      </div>
+
+      <div class="container">
+        <div class="click-div">
+
+
+          <button class="run btn flash" id="run-1">Click & Run</button>
+
+          <!--  modal 1// -->
+          <div id="playerNameModal" class="modal backInDown">
+            <div class="modal-content">
+              <div class="modal-div">
+                <label for="playerNameInput">Please enter player name:</label>
+                <span class="close" onclick="closeModal()">&#10006;</span>
+              </div>
+              <input type="text" id="playerNameInput" required autofocus />
+              <button onclick="setPlayerName()">Set Player Name</button>
+            </div>
+          </div>
+
+
+
+          <button class="run btn" id="run-2">Player 2</button>
+
+          <!-- modal two  -->
+          <div id="playerNameModalTwo" class="modal backInDown">
+            <div class="modal-content">
+              <div class="modal-div">
+                <label for="playerNameInput">Please enter player name:</label>
+                <span class="close" onclick="closeModalTwo()">&#10006;</span>
+              </div>
+              <input type="text" id="playerNameInputTwo" required  autofocus/>
+              <button onclick="setPlayerNameTwo()">Set Player Name</button>
+            </div>
+          </div>
+          <button class="run btn" id="run-3">Player 3</button>
+
+          <div id="playerNameModalThree" class="modal backInDown">
+            <div class="modal-content">
+              <div class="modal-div">
+                <label for="playerNameInputThree"
+                  >Please enter player name:</label
+                >
+                <span class="close" onclick="closeModalThree()">&#10006;</span>
+              </div>
+              <input type="text" id="playerNameInputThree" required autofocus />
+              <button onclick="setPlayerNameThree()" id="click-3">Set Player Name</button>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <div id="player-one">1</div>
+          <div id="player-two">2</div>
+          <div id="player-three">3</div>
+
+          <div class="winning-stage zoomIn" id="winning-stage">
+            <div>
+              <div class="run btn fly  backInDownP" id="stagePNameTwo"> </div>
+              <div class="stage" id="stageTwo"></div>
+            </div>
+            <div>
+              <div class="run btn fly backInDownP " id="stagePNameOne"> </div>
+              <div class="stage" id="stageOne"><img  src="/first.svg"/></div>
+            </div>
+            <div>
+              <div class="run btn fly  backInDownP" id="stagePNameThree"> </div>
+              <div class="stage" id="stageThree"></div>
+            </div>
+          </div>
+        </div>
+        <div class="result-div">
+          <div class="player-one-status">
+            <h3>
+              Player-1 :
+              <p id="pOneName"></p>
+            </h3>
+            <p>Time : <span id="pOneTime"></span></p>
+          </div>
+          <div class="player-two-status">
+            <h3>
+              Player-2 :
+              <p id="ptwoName"></p>
+            </h3>
+            <p>Time : <span id="pTwoTime"></span></p>
+          </div>
+          <div class="player-three-status">
+            <h3>
+              Player-3 :
+              <p id="pThreeName"></p>
+            </h3>
+            <p>Time : <span id="pThreeTime"></span></p>
+          </div>
+
+          <div class="result">
+            <p>
+              Winner: <span id="winner"></span>
+              <img class="bounceIn" id="gif" src="asset/giphy.gif" />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- // code start  for winning animation //  -->
+
+      <button class="refresh-btn" id="refresh">
+        <img id="refreshImg" class="rotate-scale-up" src="asset/refresh-149.png" />
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
