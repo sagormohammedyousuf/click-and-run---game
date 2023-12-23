@@ -332,7 +332,7 @@ run.addEventListener('click', () => {
       // const roundTimeOne = Math.round(elapsedTimeOne / 1000)
       timeArray.push(elapsedTimeOne / 1000);
 
-      pOneTime.textContent = (elapsedTimeOne / 1000) + " second";
+      pOneTime.textContent = (elapsedTimeOne / 1000).toFixed(3) + " second";
 
 
       // push player name //
@@ -681,7 +681,9 @@ runTwo.addEventListener('click', () => {
 
       const roundTimeTwo = (elapsedTimeTwo / 1000)
       timeArray.push(roundTimeTwo);
-      pTwoTime.textContent = (elapsedTimeTwo / 1000) + " second";
+
+      
+      pTwoTime.textContent = (elapsedTimeTwo / 1000).toFixed(3) + " second";
 
 
       // push player name //
@@ -1046,7 +1048,7 @@ runThree.addEventListener('click', () => {
      
       const roundTimeThree = (elapsedTimeThree / 1000);
       timeArray.push(roundTimeThree); // push time array 
-      pThreeTime.textContent = (elapsedTimeThree / 1000) + " second";
+      pThreeTime.textContent = (elapsedTimeThree / 1000).toFixed(3) + " second";
 
 
       
