@@ -24,7 +24,7 @@
           <div class="confetti-piece"></div>
           <div class="confetti-piece"></div>
           <div class="confetti-piece"></div>
-                    <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
           <div class="confetti-piece"></div>
           <div class="confetti-piece"></div>
           <div class="confetti-piece"></div>
@@ -38,14 +38,19 @@
           <div class="confetti-piece"></div>
           <div class="confetti-piece"></div>
         </div>
-        <h1 class="game-name flash neon">Click <span class="and">And</span> <img class="" src="asset/Run_icon.png" /></h1>
+        <h1 class="game-name flash neon">
+          Click <span class="and">And</span>
+          <img class="" src="asset/Run_icon.png" />
+        </h1>
       </div>
 
       <div class="container">
-        <div class="click-div">
+        <div class="click-div" id="click-div">
+          <div>
+            <button class="run btn flash" id="run-1">Click & Run</button>
 
-
-          <button class="run btn flash" id="run-1">Click & Run</button>
+            <button class="run btn flash" id="run-1-duplicate">Click & Run</button>
+          </div>
 
           <!--  modal 1// -->
           <div id="playerNameModal" class="modal backInDown">
@@ -59,9 +64,10 @@
             </div>
           </div>
 
-
-
+         <div>
           <button class="run btn" id="run-2">Player 2</button>
+          <button class="run btn" id="run-2-duplicate">Player 2</button>
+         </div>
 
           <!-- modal two  -->
           <div id="playerNameModalTwo" class="modal backInDown">
@@ -70,7 +76,7 @@
                 <label for="playerNameInput">Please enter player name:</label>
                 <span class="close" onclick="closeModalTwo()">&#10006;</span>
               </div>
-              <input type="text" id="playerNameInputTwo" required  autofocus/>
+              <input type="text" id="playerNameInputTwo" required autofocus />
               <button onclick="setPlayerNameTwo()">Set Player Name</button>
             </div>
           </div>
@@ -85,26 +91,28 @@
                 <span class="close" onclick="closeModalThree()">&#10006;</span>
               </div>
               <input type="text" id="playerNameInputThree" required autofocus />
-              <button onclick="setPlayerNameThree()" id="click-3">Set Player Name</button>
+              <button onclick="setPlayerNameThree()" id="click-3">
+                Set Player Name
+              </button>
             </div>
           </div>
         </div>
         <div class="display">
-          <div id="player-one">1</div>
-          <div id="player-two">2</div>
-          <div id="player-three">3</div>
+          <div id="player-one"><p id="playerNumber">1</p></div>
+          <div id="player-two"><p>2</p></div>
+          <div id="player-three"><p>3</p></div>
 
           <div class="winning-stage zoomIn" id="winning-stage">
-            <div>
-              <div class="run btn fly  backInDownP" id="stagePNameTwo"> </div>
+            <div id="stage-row-Two">
+              <div class="run btn fly backInDownP" id="stagePNameTwo"></div>
               <div class="stage" id="stageTwo"></div>
             </div>
-            <div>
-              <div class="run btn fly backInDownP " id="stagePNameOne"> </div>
-              <div class="stage" id="stageOne"><img  src="/first.svg"/></div>
+            <div id="stage-row-one">
+              <div class="run btn fly backInDownP" id="stagePNameOne"></div>
+              <div class="stage" id="stageOne"><img src="/first.svg" /></div>
             </div>
-            <div>
-              <div class="run btn fly  backInDownP" id="stagePNameThree"> </div>
+            <div id="stage-row-Three">
+              <div class="run btn fly backInDownP" id="stagePNameThree"></div>
               <div class="stage" id="stageThree"></div>
             </div>
           </div>
@@ -144,7 +152,11 @@
       <!-- // code start  for winning animation //  -->
 
       <button class="refresh-btn" id="refresh">
-        <img id="refreshImg" class="rotate-scale-up" src="asset/refresh-149.png" />
+        <img
+          id="refreshImg"
+          class="rotate-scale-up"
+          src="asset/refresh-149.png"
+        />
       </button>
     </div>
     <script src="script.js"></script>

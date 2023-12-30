@@ -11,7 +11,7 @@ const pOneName = document.getElementById("pOneName");
 
 let a = 0; // initial value // 
 run.addEventListener('click', () => {
-  
+
 
   if (a === 60) {
     startTime = performance.now(); // start count run time // 
@@ -24,7 +24,7 @@ run.addEventListener('click', () => {
     case 30:
       var modal = document.getElementById("playerNameModal");
       modal.style.display = "block";
-    
+
       break;
     case 60:
       playerOne.style.marginLeft = `${a}px`;
@@ -130,8 +130,8 @@ run.addEventListener('click', () => {
       break;
 
     case 1050:
-      playerOne.style.transform = `rotate(-180deg)`
-      playerOne.style.transformOrigin = "center";
+      playerOne.style.transform = "rotate(-180deg)"
+
       break;
 
     case 1080:
@@ -342,7 +342,7 @@ run.addEventListener('click', () => {
 
 
 
-   
+
 
       break;
     case 2130:
@@ -682,7 +682,7 @@ runTwo.addEventListener('click', () => {
       const roundTimeTwo = (elapsedTimeTwo / 1000)
       timeArray.push(roundTimeTwo);
 
-      
+
       pTwoTime.textContent = (elapsedTimeTwo / 1000).toFixed(3) + " second";
 
 
@@ -1045,13 +1045,13 @@ runThree.addEventListener('click', () => {
       playerThree.style.marginLeft = `0px`;
       const endTime = performance.now();
       const elapsedTimeThree = endTime - startTime; // count run time
-     
+
       const roundTimeThree = (elapsedTimeThree / 1000);
       timeArray.push(roundTimeThree); // push time array 
       pThreeTime.textContent = (elapsedTimeThree / 1000).toFixed(3) + " second";
 
 
-      
+
 
 
       break;
@@ -1059,7 +1059,7 @@ runThree.addEventListener('click', () => {
       alert("Game is over");
 
       const minValue = Math.min(...timeArray); // finding minimum run time
-     const minIndex = timeArray.indexOf(minValue); // find min value index 
+      const minIndex = timeArray.indexOf(minValue); // find min value index 
 
       gif.style.display = "block";
       animation.style.display = "flex";
@@ -1079,7 +1079,7 @@ runThree.addEventListener('click', () => {
       if (minIndex === 0) {
         winner.textContent = "player-1";
         stageOne.innerText = "player-1";
-        let name =  playerNameArray[0] ;
+        let name = playerNameArray[0];
         const winnerName = document.getElementById("stagePNameOne");
         winnerName.textContent = name;
         winnerName.style.background = '#304D30;'
@@ -1087,17 +1087,27 @@ runThree.addEventListener('click', () => {
         winner.textContent = "player-2";
         stageOne.innerText = "player-2";
 
-        let name =  playerNameArray[1] ;
+        let name = playerNameArray[1];
         const winnerName = document.getElementById("stagePNameOne");
         winnerName.textContent = name;
         winnerName.style.background = '#31304D';
+
+
+        // set animation when player to will be first // 
+
+        winnerName.style.display = "none"
+        const runTwo = document.getElementById("run-2");
+        runTwo.classList.add("flyAnimWinnerMidFirst");
+        setInterval(() => {
+        winnerName.style.display = "flex";
+        }, 3000);
 
 
       } else if (minIndex === 2) {
         winner.textContent = "player-3"
         stageOne.innerText = "player-3";
 
-        let name =  playerNameArray[2] ;
+        let name = playerNameArray[2];
         const winnerName = document.getElementById("stagePNameOne");
         winnerName.textContent = name;
         winnerName.style.background = "#DBCC95"
@@ -1131,23 +1141,29 @@ runThree.addEventListener('click', () => {
       if (secondMinValueIndex === 0) {
         stageTwo.textContent = "player-1";
 
-        let name =  playerNameArray[0] ;
+        let name = playerNameArray[0];
         const winnerNameTwo = document.getElementById("stagePNameTwo");
+
         winnerNameTwo.textContent = name;
-       
+
         winnerNameTwo.style.background = '#304D30';
 
 
       } else if (secondMinValueIndex === 1) {
 
-
         stageTwo.textContent = "player-2";
-        let name =  playerNameArray[1] ;
+        let name = playerNameArray[1];
         const winnerNameTwo = document.getElementById("stagePNameTwo");
         winnerNameTwo.textContent = name;
-
-        
         winnerNameTwo.style.background = 'hsl(242, 40%, 25%)';
+
+        // set animation for stage player// 
+        winnerNameTwo.style.display = "none"
+        const runTwo = document.getElementById("run-2");
+        runTwo.classList.add("flyAnimWinnerMidSecond");
+        setInterval(() => {
+        winnerNameTwo.style.display = "flex";
+        }, 3000);
 
 
       } else if (secondMinValueIndex === 2) {
@@ -1155,11 +1171,12 @@ runThree.addEventListener('click', () => {
 
         stageTwo.textContent = "player-3"
 
-        let name =  playerNameArray[2] ;
+        let name = playerNameArray[2];
         const winnerNameTwo = document.getElementById("stagePNameTwo");
+
         winnerNameTwo.textContent = name;
 
-       
+
         winnerNameTwo.style.background = '#DBCC95';
 
       } else {
@@ -1170,7 +1187,7 @@ runThree.addEventListener('click', () => {
 
       // 3rd stage // 
 
-       // finding who positioned 3rd // 
+      // finding who positioned 3rd // 
       const maxValue = Math.max(...timeArray);
 
       const maxValueIndex = timeArray.indexOf(maxValue);
@@ -1179,37 +1196,39 @@ runThree.addEventListener('click', () => {
 
 
       if (maxValueIndex === 0) {
-
-
         stageThree.textContent = "player-1";
-
-
-        let name =  playerNameArray[0] ;
+        let name = playerNameArray[0];
         const winnerNameTwo = document.getElementById("stagePNameThree");
         winnerNameTwo.textContent = name;
-
-        
         winnerNameTwo.style.background = '#304D30';
 
 
       } else if (maxValueIndex === 1) {
-         stageThree.textContent = "player-2";
+        stageThree.textContent = "player-2";
 
-         let name =  playerNameArray[1] ;
-         const winnerNameTwo = document.getElementById("stagePNameThree");
-         winnerNameTwo.textContent = name;
-         winnerNameTwo.style.background = 'hsl(242, 40%, 25%)';
+        let name = playerNameArray[1];
+        const winnerNameTwo = document.getElementById("stagePNameThree");
+        winnerNameTwo.textContent = name;
+        winnerNameTwo.style.background = 'hsl(242, 40%, 25%)';
 
-         
-         
+
+        // ‍animation //
+        winnerNameTwo.style.display = "none"
+        const runTwo = document.getElementById("run-2");
+        runTwo.classList.add("flyAnimWinnerMidThird");
+        setInterval(() => {
+        winnerNameTwo.style.display = "flex";
+        }, 3000);
+
+
 
 
       } else if (maxValueIndex === 2) {
         stageThree.textContent = "player-3";
-        let name =  playerNameArray[2] ;
+        let name = playerNameArray[2];
         const winnerNameTwo = document.getElementById("stagePNameThree");
         winnerNameTwo.textContent = name;
-       
+
         winnerNameTwo.style.background = '#DBCC95';
 
 
@@ -1222,6 +1241,28 @@ runThree.addEventListener('click', () => {
       refreshFlash.classList.remove("rotate-scale-up");
       refreshFlash.classList.add("flashRef");
       // refreshFlash.style.display = "none";
+
+
+      // code for copy run button and set top off stage // 
+
+      // const run = document.getElementById("run-1");
+      // run.classList.add ("flyAnimWinnerTopFirst");
+
+      // run.style. = ""
+      // const clickDiv = document.getElementById("click-div");
+      // clickDiv.style  = `
+      // width : 100%;
+      // height : 50vh;
+      // display: flex;
+      // align-item: center;
+      // justify-content: space-around;
+     
+      // `
+      // setInterval(() => {
+      //   const stagePNameThree = document.getElementById("stagePNameThree");
+      //   stagePNameThree.style.display = "flex";
+      // }, 3000);
+
       break;
   }
 })
@@ -1243,7 +1284,7 @@ function openModal() {
   modal.style.display = "block";
 
   // Listen for the animationend event to ensure the modal is fully displayed
-  modal.addEventListener("animationend", function() {
+  modal.addEventListener("animationend", function () {
     var playerNameInputF = document.getElementById("playerNameInput");
     playerNameInputF.focus();
   }, { once: true }); // Use { once: true } to remove the event listener after it's triggered once
@@ -1303,7 +1344,7 @@ function closeModalTwo() {
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
     closeModalTwo();
-    
+
   }
 });
 
@@ -1368,7 +1409,8 @@ function setPlayerNameThree() {
     alert("Please enter a valid player name.");
   }
 
-  enterListener();
+
+
 }
 
 // when click escape key //
@@ -1382,19 +1424,13 @@ document.addEventListener("keydown", function (event) {
 
 //    when click enter
 
-function enterListener(event) {
-  if (event.key === "Enter") {
-    setPlayerNameThree();
-  }
-}
+// playerNameInputThree.addEventListener("keydown", (e) => {
+//   if (e.key === "Enter") {
+//     setPlayerNameThree();
+//   }
+// });
+
+// console.log(playerNameArray);
 
 
 
-
-
-
-console.log(playerNameArray);
-
-
-
-// নেই কেউ নেই যেন জন্য মানব শূন্য ।
