@@ -46,10 +46,10 @@
 
       <div class="container">
         <div class="click-div" id="click-div">
-          <div>
-            <button class="run btn flash" id="run-1">Click & Run</button>
 
-            <button class="run btn flash" id="run-1-duplicate">Click & Run</button>
+          <!-- button 1 -->
+          <div id="run-1-div">
+            <button class="run btn flash" id="run-1">Click & Run</button>
           </div>
 
           <!--  modal 1// -->
@@ -64,9 +64,9 @@
             </div>
           </div>
 
-         <div>
-          <button class="run btn" id="run-2">Player 2</button>
-          <button class="run btn" id="run-2-duplicate">Player 2</button>
+         <div  id="run-2-div">
+          <button class="run btn" id="run-2">Player b</button>
+          <!-- <button class="run btn" id="run-two-dup">Player 2</button> -->
          </div>
 
           <!-- modal two  -->
@@ -80,7 +80,10 @@
               <button onclick="setPlayerNameTwo()">Set Player Name</button>
             </div>
           </div>
-          <button class="run btn" id="run-3">Player 3</button>
+          
+          <div id="run-3-div">
+            <button class="run btn" id="run-3">Player c</button>
+          </div>
 
           <div id="playerNameModalThree" class="modal backInDown">
             <div class="modal-content">
@@ -120,21 +123,21 @@
         <div class="result-div">
           <div class="player-one-status">
             <h3>
-              Player-1 :
+              Player-a:
               <p id="pOneName"></p>
             </h3>
             <p>Time : <span id="pOneTime"></span></p>
           </div>
           <div class="player-two-status">
             <h3>
-              Player-2 :
+              Player-b:
               <p id="ptwoName"></p>
             </h3>
             <p>Time : <span id="pTwoTime"></span></p>
           </div>
           <div class="player-three-status">
             <h3>
-              Player-3 :
+              Player-c:
               <p id="pThreeName"></p>
             </h3>
             <p>Time : <span id="pThreeTime"></span></p>

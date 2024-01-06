@@ -313,7 +313,7 @@
 #stagePNameTwo,
 #stagePNameThree {
   width: 100px;
-
+  display: none;
   margin-bottom: 3.9rem;
   transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
@@ -328,11 +328,8 @@
 } */
 
 #stagePNameThree {
-  background: #900c3f;
-}
-
-#stagePNameThree {
-  display: flex;
+  /* display: flex; */
+  display: none;
   align-items: center;
   justify-content: center;
 }
@@ -910,7 +907,13 @@
   }
 
   100% {
-    /* display: none; */
+    top: 48%;
+    left: 39%;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
   }
 }
 
@@ -928,7 +931,7 @@
 
 @keyframes flyAnimWinnerMidThird {
   0% {
-    top: 50%;
+    top: 40%;
     left: 10%;
   }
 
@@ -948,7 +951,13 @@
   }
 
   100% {
-    /* display: none; */
+    top: 51.5%;
+    left: 57%;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
   }
 }
 
@@ -984,7 +993,13 @@
   }
 
   100% {
-    /* display: none; */
+    top: 42%;
+    left: 48%;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
   }
 }
 
@@ -1024,15 +1039,16 @@
   90% {
     top: 48%;
     left: 39%;
-    transform: rotate(270deg);
+    
  
 }
 
   100% {
-    display: none;
-    /* top: 30%;
-    left: 10%; */
-  }
+    transform: rotate(270deg);
+    top: 48%;
+    left: 39%;
+
+}
 }
 
 
@@ -1043,11 +1059,11 @@
   animation-duration: 3s;
   animation-name: flyAnimWinnerTopThird;
   position: absolute;
-  /* animation-fill-mode: forwards; */
+  animation-fill-mode: forwards;
 }
 
 @keyframes flyAnimWinnerTopThird {
-  0% {
+  0% {  
     top: 50%;
     left: 10%;
   }
@@ -1064,7 +1080,8 @@
 }
 
   100% {
-    display: none;
+    top: 50%;
+    left: 57%;
   }
 }
 
@@ -1076,12 +1093,143 @@
   animation-duration: 3s;
   animation-name: flyAnimWinnerTopFirst;
   position: absolute;
-  /* animation-fill-mode: forwards; */
+  animation-fill-mode: forwards;
+  
 }
 
 @keyframes flyAnimWinnerTopFirst {
   0% {
     top: 29%;
+    left: 10%;
+  }
+
+  50% {
+    top: 20%;
+    left: 40%;
+  }
+  90% {
+    top: 42%;
+    left: 48%;
+    
+  }
+
+  100% {
+    top: 42%;
+    left: 48%;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* animation start for player 3  */
+
+.flyAnimWinnerBottomSecond {
+  animation-duration: 3s;
+  animation-name: flyAnimWinnerBottomSecond;
+  position: absolute;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flyAnimWinnerBottomSecond {
+  0% {
+    top: 58%;
+    left: 10%;
+  }
+
+  50% {
+    top: 25%;
+    left: 30%;
+  }
+  90% {
+    top: 47%;
+    left: 39%;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    
+  }
+
+  100% {
+    top: 48%;
+    left: 40%;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+  }
+}
+
+
+
+
+
+
+.flyAnimWinnerBottomThird  {
+  animation-duration: 3s;
+  animation-name: flyAnimWinnerBottomThird;
+  position: absolute;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flyAnimWinnerBottomThird {
+  0% {
+    top: 58%;
+    left: 10%;
+  }
+
+  50% {
+    top: 20%;
+    left: 40%;
+  }
+  90% {
+    top: 50%;
+    left: 57%;
+    transform: rotate(270deg);
+
+}
+
+  100% {
+    top: 51.5%;
+    left: 57%;
+    transform: rotate(270deg);
+  
+}
+}
+
+
+
+
+
+.flyAnimWinnerBottomFirst {
+  animation-duration: 3s;
+  animation-name: flyAnimWinnerBottomFirst;
+  position: absolute;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flyAnimWinnerBottomFirst {
+  0% {
+    top: 58%;
     left: 10%;
   }
 
@@ -1098,41 +1246,16 @@
     -ms-transform: rotate(270deg);
     -o-transform: rotate(270deg);
   }
-s
+
   100% {
-    /* display: none; */
+    top: 42%;
+    left: 48%;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
   }
 }
 
 
-/* animation end for player 2  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* test animation  */
-
-#run-1-duplicate {
-  display: none;
-}
-
-
-#run-2-duplicate {
-  display: none;
-  background: hsl(242, 40%, 25%);
-}

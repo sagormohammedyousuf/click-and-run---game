@@ -1077,15 +1077,30 @@ runThree.addEventListener('click', () => {
 
       // finding who winner // 
       if (minIndex === 0) {
-        winner.textContent = "player-1";
-        stageOne.innerText = "player-1";
+        winner.textContent = "player-a";
+        stageOne.innerText = "player-a";
         let name = playerNameArray[0];
         const winnerName = document.getElementById("stagePNameOne");
         winnerName.textContent = name;
         winnerName.style.background = '#304D30;'
+
+
+          // animation add //0
+
+        var run = document.getElementById("run-1");
+        var runTwoDivX = document.getElementById("run-1-div");
+        var cloneRun = run.cloneNode(true);
+        runTwoDivX.appendChild(cloneRun);
+        
+
+        run.classList.add("flyAnimWinnerTopFirst");
+        
+
+
+
       } else if (minIndex === 1) {
-        winner.textContent = "player-2";
-        stageOne.innerText = "player-2";
+        winner.textContent = "player-b";
+        stageOne.innerText = "player-b";
 
         let name = playerNameArray[1];
         const winnerName = document.getElementById("stagePNameOne");
@@ -1097,20 +1112,35 @@ runThree.addEventListener('click', () => {
 
         winnerName.style.display = "none"
         const runTwo = document.getElementById("run-2");
-        runTwo.classList.add("flyAnimWinnerMidFirst");
-        setInterval(() => {
-        winnerName.style.display = "flex";
-        }, 3000);
+       
+
+
+        let runTwoDivZ = document.getElementById("run-2-div");
+        let cloneRun = runTwo.cloneNode(true);
+        runTwoDivZ.appendChild(cloneRun);
+
+
+        runTwo.classList.add("flyAnimWinnerMidFirst"); 
+       
 
 
       } else if (minIndex === 2) {
-        winner.textContent = "player-3"
-        stageOne.innerText = "player-3";
+        winner.textContent = "player-c"
+        stageOne.innerText = "player-c";
 
         let name = playerNameArray[2];
         const winnerName = document.getElementById("stagePNameOne");
         winnerName.textContent = name;
         winnerName.style.background = "#DBCC95"
+
+        // add animation //
+        const runTwo = document.getElementById("run-3");
+        let runTwoDivThree = document.getElementById("run-3-div");
+        let cloneRun = runThree.cloneNode(true);
+        runTwoDivThree.appendChild(cloneRun);
+
+
+        runTwo.classList.add("flyAnimWinnerBottomFirst"); 
 
       } else {
         console.log("No winner");
@@ -1139,7 +1169,7 @@ runThree.addEventListener('click', () => {
       stageTwo.style.backgroundColor = "green";
 
       if (secondMinValueIndex === 0) {
-        stageTwo.textContent = "player-1";
+        stageTwo.textContent = "player-a";
 
         let name = playerNameArray[0];
         const winnerNameTwo = document.getElementById("stagePNameTwo");
@@ -1149,9 +1179,22 @@ runThree.addEventListener('click', () => {
         winnerNameTwo.style.background = '#304D30';
 
 
+
+
+          //clone element & animation //
+
+          var run = document.getElementById("run-1");
+          var runTwoDivX = document.getElementById("run-1-div");
+          var cloneRun = run.cloneNode(true);
+          runTwoDivX.appendChild(cloneRun);
+          
+  
+          run.classList.add("flyAnimWinnerTopSecond");
+
+
       } else if (secondMinValueIndex === 1) {
 
-        stageTwo.textContent = "player-2";
+        stageTwo.textContent = "player-b";
         let name = playerNameArray[1];
         const winnerNameTwo = document.getElementById("stagePNameTwo");
         winnerNameTwo.textContent = name;
@@ -1160,16 +1203,27 @@ runThree.addEventListener('click', () => {
         // set animation for stage player// 
         winnerNameTwo.style.display = "none"
         const runTwo = document.getElementById("run-2");
+       
+
+
+       
+       
+        
+        //clone element
+
+        var runTwoDivX = document.getElementById("run-2-div");
+        var cloneRun = runTwo.cloneNode(true);
+        runTwoDivX.appendChild(cloneRun);
+        // let runTwoDup = document.getElementById("run-two-dup");
+        // runTwoDup.style.display = "block"
+
         runTwo.classList.add("flyAnimWinnerMidSecond");
-        setInterval(() => {
-        winnerNameTwo.style.display = "flex";
-        }, 3000);
 
-
+      
       } else if (secondMinValueIndex === 2) {
 
 
-        stageTwo.textContent = "player-3"
+        stageTwo.textContent = "player-c"
 
         let name = playerNameArray[2];
         const winnerNameTwo = document.getElementById("stagePNameTwo");
@@ -1178,6 +1232,15 @@ runThree.addEventListener('click', () => {
 
 
         winnerNameTwo.style.background = '#DBCC95';
+
+
+        const runTwo = document.getElementById("run-3");
+        let runTwoDivThree = document.getElementById("run-3-div");
+        let cloneRun = runThree.cloneNode(true);
+        runTwoDivThree.appendChild(cloneRun);
+
+
+        runTwo.classList.add("flyAnimWinnerBottomSecond"); 
 
       } else {
         console.log("No winner");
@@ -1201,11 +1264,23 @@ runThree.addEventListener('click', () => {
         const winnerNameTwo = document.getElementById("stagePNameThree");
         winnerNameTwo.textContent = name;
         winnerNameTwo.style.background = '#304D30';
+        winnerNameTwo.style.display = none;
 
 
+          //clone element & animation //
+
+
+          const runOne = document.getElementById("run-1");
+          let runOneDiv = document.getElementById("run-1-div");
+          let cloneRun = runOne.cloneNode(true);
+          runOneDiv.appendChild(cloneRun);
+  
+  
+          runTwo.classList.add("flyAnimWinnerTopThird"); 
+          
+   
       } else if (maxValueIndex === 1) {
-        stageThree.textContent = "player-2";
-
+        stageThree.textContent = "player-b";
         let name = playerNameArray[1];
         const winnerNameTwo = document.getElementById("stagePNameThree");
         winnerNameTwo.textContent = name;
@@ -1213,23 +1288,44 @@ runThree.addEventListener('click', () => {
 
 
         // ‍animation //
-        winnerNameTwo.style.display = "none"
+ 
+        // winnerNameTwo.style.display = "none"
         const runTwo = document.getElementById("run-2");
+        winnerNameTwo.style.display = "none";
+        
+        //clone element
+
+        let runTwoDiv = document.getElementById("run-2-div");
+        let cloneRun = runTwo.cloneNode(true);
+        runTwoDiv.appendChild(cloneRun);
+
+
         runTwo.classList.add("flyAnimWinnerMidThird");
-        setInterval(() => {
-        winnerNameTwo.style.display = "flex";
-        }, 3000);
+       
+        
+       
 
 
 
 
       } else if (maxValueIndex === 2) {
-        stageThree.textContent = "player-3";
+        stageThree.textContent = "player-c";
         let name = playerNameArray[2];
         const winnerNameTwo = document.getElementById("stagePNameThree");
         winnerNameTwo.textContent = name;
 
         winnerNameTwo.style.background = '#DBCC95';
+
+
+        // add animation ///
+        const runTwo = document.getElementById("run-3");
+        let runTwoDivThree = document.getElementById("run-3-div");
+        let cloneRun = runThree.cloneNode(true);
+        runTwoDivThree.appendChild(cloneRun);
+
+
+        runTwo.classList.add("flyAnimWinnerBottomThird"); 
+       
 
 
       } else {
@@ -1245,8 +1341,8 @@ runThree.addEventListener('click', () => {
 
       // code for copy run button and set top off stage // 
 
-      // const run = document.getElementById("run-1");
-      // run.classList.add ("flyAnimWinnerTopFirst");
+      // const runThree = document.getElementById("run-3");
+      // runThree.classList.add ("flyAnimWinnerBottomFirst");
 
       // run.style. = ""
       // const clickDiv = document.getElementById("click-div");
