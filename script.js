@@ -131,7 +131,9 @@ run.addEventListener('click', () => {
 
     case 1050:
       playerOne.style.transform = "rotate(-180deg)"
-
+      let pNameText = document.getElementById("playerNumber");
+      pNameText.textContent = "1"
+      pNameText.style.transform = "rotate(180deg)"
       break;
 
     case 1080:
@@ -485,7 +487,9 @@ runTwo.addEventListener('click', () => {
     case 1050:
       playerTwo.style.transform = `rotate(-180deg)`
 
-
+      let pNameText = document.getElementById("playerTwoNumber");
+      pNameText.textContent = "2"
+      pNameText.style.transform = "rotate(180deg)"
       break;
 
     case 1080:
@@ -851,8 +855,10 @@ runThree.addEventListener('click', () => {
       playerThree.style.marginLeft = `$1010px`;
     case 1050:
       playerThree.style.transform = `rotate(-180deg)`
-      rText.style.transform = "rotate(0deg)"
-
+      // rText.style.transform = "rotate(0deg)"
+      let pNameText = document.getElementById("playerThreeNumber");
+      pNameText.textContent = "3"
+      pNameText.style.transform = "rotate(180deg)"
       break;
 
     case 1080:
@@ -1085,16 +1091,16 @@ runThree.addEventListener('click', () => {
         winnerName.style.background = '#304D30;'
 
 
-          // animation add //0
+        // animation add //0
 
         var run = document.getElementById("run-1");
         var runTwoDivX = document.getElementById("run-1-div");
         var cloneRun = run.cloneNode(true);
         runTwoDivX.appendChild(cloneRun);
-        
+
 
         run.classList.add("flyAnimWinnerTopFirst");
-        
+
 
 
 
@@ -1112,7 +1118,7 @@ runThree.addEventListener('click', () => {
 
         winnerName.style.display = "none"
         const runTwo = document.getElementById("run-2");
-       
+
 
 
         let runTwoDivZ = document.getElementById("run-2-div");
@@ -1120,8 +1126,8 @@ runThree.addEventListener('click', () => {
         runTwoDivZ.appendChild(cloneRun);
 
 
-        runTwo.classList.add("flyAnimWinnerMidFirst"); 
-       
+        runTwo.classList.add("flyAnimWinnerMidFirst");
+
 
 
       } else if (minIndex === 2) {
@@ -1140,7 +1146,7 @@ runThree.addEventListener('click', () => {
         runTwoDivThree.appendChild(cloneRun);
 
 
-        runTwo.classList.add("flyAnimWinnerBottomFirst"); 
+        runTwo.classList.add("flyAnimWinnerBottomFirst");
 
       } else {
         console.log("No winner");
@@ -1181,15 +1187,15 @@ runThree.addEventListener('click', () => {
 
 
 
-          //clone element & animation //
+        //clone element & animation //
 
-          var run = document.getElementById("run-1");
-          var runTwoDivX = document.getElementById("run-1-div");
-          var cloneRun = run.cloneNode(true);
-          runTwoDivX.appendChild(cloneRun);
-          
-  
-          run.classList.add("flyAnimWinnerTopSecond");
+        var run = document.getElementById("run-1");
+        var runTwoDivX = document.getElementById("run-1-div");
+        var cloneRun = run.cloneNode(true);
+        runTwoDivX.appendChild(cloneRun);
+
+
+        run.classList.add("flyAnimWinnerTopSecond");
 
 
       } else if (secondMinValueIndex === 1) {
@@ -1203,12 +1209,12 @@ runThree.addEventListener('click', () => {
         // set animation for stage player// 
         winnerNameTwo.style.display = "none"
         const runTwo = document.getElementById("run-2");
-       
 
 
-       
-       
-        
+
+
+
+
         //clone element
 
         var runTwoDivX = document.getElementById("run-2-div");
@@ -1219,7 +1225,7 @@ runThree.addEventListener('click', () => {
 
         runTwo.classList.add("flyAnimWinnerMidSecond");
 
-      
+
       } else if (secondMinValueIndex === 2) {
 
 
@@ -1240,7 +1246,7 @@ runThree.addEventListener('click', () => {
         runTwoDivThree.appendChild(cloneRun);
 
 
-        runTwo.classList.add("flyAnimWinnerBottomSecond"); 
+        runTwo.classList.add("flyAnimWinnerBottomSecond");
 
       } else {
         console.log("No winner");
@@ -1267,18 +1273,19 @@ runThree.addEventListener('click', () => {
         winnerNameTwo.style.display = none;
 
 
-          //clone element & animation //
+        //clone element & animation //
+
+        var run = document.getElementById("run-1");
+        var runTwoDivX = document.getElementById("run-1-div");
+        var cloneRun = run.cloneNode(true);
+        runTwoDivX.appendChild(cloneRun);
 
 
-          const runOne = document.getElementById("run-1");
-          let runOneDiv = document.getElementById("run-1-div");
-          let cloneRun = runOne.cloneNode(true);
-          runOneDiv.appendChild(cloneRun);
-  
-  
-          runTwo.classList.add("flyAnimWinnerTopThird"); 
-          
-   
+        run.classList.add("flyAnimWinnerTopThird");
+        // flyAnimWinnerTopThird 
+ 
+
+
       } else if (maxValueIndex === 1) {
         stageThree.textContent = "player-b";
         let name = playerNameArray[1];
@@ -1288,11 +1295,11 @@ runThree.addEventListener('click', () => {
 
 
         // ‍animation //
- 
+
         // winnerNameTwo.style.display = "none"
         const runTwo = document.getElementById("run-2");
         winnerNameTwo.style.display = "none";
-        
+
         //clone element
 
         let runTwoDiv = document.getElementById("run-2-div");
@@ -1301,9 +1308,9 @@ runThree.addEventListener('click', () => {
 
 
         runTwo.classList.add("flyAnimWinnerMidThird");
-       
-        
-       
+
+
+
 
 
 
@@ -1324,8 +1331,8 @@ runThree.addEventListener('click', () => {
         runTwoDivThree.appendChild(cloneRun);
 
 
-        runTwo.classList.add("flyAnimWinnerBottomThird"); 
-       
+        runTwo.classList.add("flyAnimWinnerBottomThird");
+
 
 
       } else {
@@ -1352,7 +1359,7 @@ runThree.addEventListener('click', () => {
       // display: flex;
       // align-item: center;
       // justify-content: space-around;
-     
+
       // `
       // setInterval(() => {
       //   const stagePNameThree = document.getElementById("stagePNameThree");
